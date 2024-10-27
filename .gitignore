@@ -1,0 +1,7 @@
+Makefile
+navilos.axf
+navilos.ld
+boot/Entry.bin
+boot/Entry.o
+build/
+
