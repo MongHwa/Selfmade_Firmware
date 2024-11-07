@@ -47,6 +47,7 @@ static void Kernel_init(void) {
     uint32_t taskId;
 
     Kernel_task_init();
+    Kernel_event_flag_init();
 
     taskId = Kernel_task_create(User_task0);
     if(NOT_ENOUGH_TASK_NUM == taskId) {
@@ -62,6 +63,8 @@ static void Kernel_init(void) {
     if(NOT_ENOUGH_TASK_NUM == taskId) {
         putstr("Task2 creation fail\n");
     }
+
+    Kernel_start();
 }
 
 void User_task0(void) {
