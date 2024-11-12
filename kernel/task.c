@@ -94,3 +94,8 @@ void Kernel_task_scheduler(void) {
 
     Kernel_task_context_switching();
 }
+
+//for Mutex
+uint32_t Kernel_task_get_current_task_id(void) {
+    return sCurrent_tcb_index;
+}
